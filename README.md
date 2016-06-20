@@ -5,6 +5,7 @@ gcloud auth login
 gcloud config list project
 gcloud config set project <project-id>
 gcloud init <project-name>
+gcloud container clusters create <cluster-name>
 ```
 
 # Kubernetes Redis Cluster
