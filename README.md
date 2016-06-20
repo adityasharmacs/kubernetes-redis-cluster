@@ -1,4 +1,12 @@
+# Create gcloud project first
+
+gcloud auth login
+gcloud config list project
+gcloud config set project <project-id>
+gcloud init <project-name> 
+
 # Kubernetes Redis Cluster
+
 
 ### Create Disks
 
