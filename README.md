@@ -51,6 +51,7 @@ apt-get update
 apt-get install ruby vim wget redis-tools
 gem install redis
 wget http://download.redis.io/redis-stable/src/redis-trib.rb
+chmod 744 redis-trib.rb
 ```
 
 ```
