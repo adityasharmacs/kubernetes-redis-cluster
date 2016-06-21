@@ -1,5 +1,6 @@
 # Create gcloud project and then cluster
 
+### Get started with gcloud cli
 ```
 gcloud auth login
 gcloud config list project
@@ -9,7 +10,12 @@ gcloud container clusters create <cluster-name>
 // get available IP address range
 gcloud container clusters describe <cluster-name> | grep servicesIpv4Cidr
 // update clusterIP: "?.?.?.?" in services files (ex: redis-1.yaml)
+```
 
+### Get started with kubernetes cli
+```
+gcloud components install kubectl
+gcloud components update kubectl
 ```
 
 # Kubernetes Redis Cluster
