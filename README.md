@@ -17,7 +17,7 @@ gcloud components update kubectl
 
 # Kubernetes Redis Cluster
 
-### Create 
+### Create Container Instances
 ```
 gcloud container clusters create <cluster-name>
 // get available IP address range from your gcloud cluster
@@ -67,6 +67,7 @@ chmod 744 redis-trib.rb
 ```
 
 ```
+// update with ip addresses used in services files above
 ./redis-trib.rb create --replicas 1 \
   10.131.242.1:6379 \
   10.131.242.2:6379 \
@@ -83,10 +84,12 @@ gcloud compute disks create --size=10GB 'redis-7'
 ```
 
 ```
+// create redis-7.yaml replicaset file
 kubectl create -f replicaset/redis-7.yaml
 ```
 
 ```
+// create redis-7.yaml services file
 kubectl create -f services/redis-7.yaml
 ```
 
