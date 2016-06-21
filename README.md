@@ -1,11 +1,14 @@
-# Create gcloud project first
+# Create gcloud project and first
 
 ```
 gcloud auth login
 gcloud config list project
 gcloud config set project <project-id>
 gcloud init <project-name>
-```
+gcloud container clusters create <cluster-name>
+// get available IP address range
+gcloud container clusters describe <cluster-name> | grep servicesIpv4Cidr
+// update clusterIP: "?.?.?.?" in services files (ex: redis-1.yaml)
 
 # Kubernetes Redis Cluster
 
@@ -20,10 +23,6 @@ gcloud compute disks create --size=10GB \
 ### Create Redis Cluster Configuration
 
 ```
-gcloud container clusters create <cluster-name>
-// get available IP address range
-gcloud container clusters describe <cluster-name> | grep servicesIpv4Cidr
-// update clusterIP: "?.?.?.?" in services files (ex: redis-1.yaml)
 kubectl create configmap redis-conf --from-file=redis.conf
 ```
 
