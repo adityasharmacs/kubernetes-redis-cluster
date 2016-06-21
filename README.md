@@ -1,4 +1,4 @@
-# Create gcloud project and then cluster
+# Create a Redis Cluster using kubernetes on gcloud
 
 ### Get started with gcloud cli
 ```
