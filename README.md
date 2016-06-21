@@ -85,7 +85,7 @@ gcloud compute disks create --size=10GB 'redis-7'
 
 ```
 // create redis-7.yaml replicaset file
-kubectl create -f replicaset/redis-7.yaml
+kubectl create -f replicasets/redis-7.yaml
 ```
 
 ```
@@ -94,5 +94,16 @@ kubectl create -f services/redis-7.yaml
 ```
 
 ```
+// get name of your pod (pick any of the redis cluster instances. ex: redis-1-..)
+kubectl get pods
+
+// connect to a redis instance (aka pod?) in your cluster
+kubectl exec -i --tty <pod name> redis-cli
+
+// update the ip address
 CLUSTER MEET 10.131.242.7 6379
+```
+### Open Port to access Redis Cluster from outside of the Cluster
+```
+tbd
 ```
