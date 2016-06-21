@@ -1,4 +1,4 @@
-# Create a Redis Cluster using kubernetes on gcloud
+# Create a Redis Cluster using Kubernetes on GCloud
 
 ### Install the GCloud CLI and Set Your Project
 ```
