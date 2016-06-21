@@ -1,4 +1,4 @@
-# Create gcloud project and first
+# Create gcloud project and then cluster
 
 ```
 gcloud auth login
@@ -10,10 +10,11 @@ gcloud container clusters create <cluster-name>
 gcloud container clusters describe <cluster-name> | grep servicesIpv4Cidr
 // update clusterIP: "?.?.?.?" in services files (ex: redis-1.yaml)
 
+```
+
 # Kubernetes Redis Cluster
 
 ### Create Disks
-
 ```
 gcloud compute disks create --size=10GB \
   'redis-1' 'redis-2' 'redis-3' \
