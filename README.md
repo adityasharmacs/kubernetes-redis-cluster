@@ -1,9 +1,8 @@
 # Create a Redis Cluster using Kubernetes on GCloud
 
 ### Requirements 
-```
 [Google Cloud Platform](https://cloud.google.com "GCP")
-```
+
 
 ### Install the GCloud CLI and Set Your Project
 ```
