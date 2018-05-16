@@ -11,7 +11,8 @@ Log into [https://console.cloud.google.com "Google Cloud Platform"] and navigate
 ### Install the GCloud CLI and Set Your Project
 ```
 gcloud auth login // found in ./google-cloud-sdk/bin/gcloud init
-gcloud config list project
+gcloud init // Pick a gcloud project-id to use, or create a new inique project-id. Example: "devopsdays_dcn_01" 
+gcloud config list project  
 gcloud config set project <project-id>
 gcloud init <project-name>
 
@@ -27,9 +28,9 @@ gcloud components update kubectl
 
 ### Create Container Instances
 ```
-gcloud container clusters create <cluster-name>
+gcloud container clusters create <cluster-name> --zone <zone> // example: cluster-name="workshop01"; zone="us-west1-a". You might need to enable the API in the dashboard (ex: https://console.cloud.google.com/apis/api/container.googleapis.com/overview?project=devopsdays01)
 // get available IP address range from your gcloud cluster
-gcloud container clusters describe <cluster-name> | grep servicesIpv4Cidr
+gcloud container clusters describe <cluster-name> --zone <zone>| grep servicesIpv4Cidr
 // update clusterIP: "?.?.?.?" in services files (ex: redis-1.yaml)
 
 ```
@@ -40,7 +41,7 @@ gcloud compute disks create --size=10GB \
   'redis-1' 'redis-2' 'redis-3' \
   'redis-4' 'redis-5' 'redis-6'
 ```
-
+  
 ### Create Redis Cluster Configuration
 
 ```
