@@ -10,7 +10,7 @@ Log into [https://console.cloud.google.com "Google Cloud Platform"] and navigate
 
 ### Install the GCloud CLI and Set Your Project
 ```
-gcloud auth login
+gcloud auth login // found in ./google-cloud-sdk/bin/gcloud init
 gcloud config list project
 gcloud config set project <project-id>
 gcloud init <project-name>
