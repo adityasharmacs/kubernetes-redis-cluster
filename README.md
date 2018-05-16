@@ -1,8 +1,11 @@
 # Create a Redis Cluster using Kubernetes on GCloud
 
 ### Requirements 
+'''
+Install Python 2.7
+Install the GCloud CLI [Google Cloud SDK](https://cloud.google.com/sdk "SDK")
 Log into [Google Cloud Platform](https://console.cloud.google.com "GCP") and navigate to the console.
-Install the GCloud CLI
+'''
 
 
 ### Install the GCloud CLI and Set Your Project
