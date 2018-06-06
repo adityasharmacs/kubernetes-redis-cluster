@@ -4,7 +4,7 @@
 ```
 Install Python 2.7
 Install the GCloud CLI [https://cloud.google.com/sdk "Google Cloud SDK"]
-Log into [https://console.cloud.google.com "Google Cloud Platform"] and navigate to the console.
+Log into https://console.cloud.google.com and navigate to the console.
 Git clone this repo
 ```
 
